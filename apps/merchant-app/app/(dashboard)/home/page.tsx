@@ -3,6 +3,15 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../../lib/auth";
 import prisma from "@repo/db/client";
 
+type ParkingLot = {
+  id: number;
+  name: string;
+  address: string;
+  price: number;
+  vacantslots: number;
+  latitude: number;
+  longitude: number;
+};
 
 
 async function getparkinglot(){
@@ -18,6 +27,7 @@ async function getparkinglot(){
 
 
 async function getParkingsForDate(parkinglotid: number, date?: string) {
+  
 
   const targetDate = new Date((date ?? new Date().toISOString().split("T")[0]) as string);
  
