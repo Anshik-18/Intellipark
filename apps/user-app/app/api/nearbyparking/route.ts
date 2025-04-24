@@ -96,7 +96,7 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const enrichedResults = rawResults.map((lot, index) => ({
+    const enrichedResults = rawResults.map((lot: ParkingLot, index) => ({
       ...lot,
       lat: lot.latitude,
       lng: lot.longitude,
