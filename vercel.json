@@ -1,0 +1,13 @@
+{
+    "projects": [
+      {
+        "src": "apps/user-app",
+        "use": "@vercel/next"
+      },
+      {
+        "src": "apps/merchant-app",
+        "use": "@vercel/next"
+      }
+    ]
+  }
+  
