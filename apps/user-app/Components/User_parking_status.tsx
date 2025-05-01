@@ -1,7 +1,7 @@
 import { DateTime } from "next-auth/providers/kakao";
 
 
-export function UserParkingCard({status,location,Adress,carNumber,starttime}:{status:any,location:string,starttime:Date,carNumber:string,Adress:string}){
+export function UserParkingCard({status,location,Adress,carNumber}:{status:any,location:string,carNumber:string,Adress:string}){
     return(
         <div className="rounded-xl border shadow-md w-full max-w-md p-4 relative bg-white">
       {/* Status Tag */}
@@ -18,14 +18,14 @@ export function UserParkingCard({status,location,Adress,carNumber,starttime}:{st
 
       {/* Car Info */}
       <div className="flex items-center mb-2 space-x-3">
-        <div className="bg-gray-100 p-2 rounded-full">
+        {/* <div className="bg-gray-100 p-2 rounded-full">
           
-        </div>
-        <div className="font-semibold">{carNumber}</div>
+        </div> */}
+        <div className="font-semibold"> Car number-{carNumber}</div>
       </div>
 
       {/* Check-in Time */}
-      <div className="flex items-center mb-4 space-x-3">
+      {/* <div className="flex items-center mb-4 space-x-3">
         <div className="bg-gray-100 p-2 rounded-full">
          
         </div>
@@ -33,7 +33,7 @@ export function UserParkingCard({status,location,Adress,carNumber,starttime}:{st
           <span className="text-gray-400 text-sm block">check in time</span>
           <span className="text-black font-medium">{starttime.getTime()}</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Navigation Button */}
       {/* <button

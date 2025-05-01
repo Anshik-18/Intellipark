@@ -27,31 +27,21 @@ async function getparkinglot(){
 
 
 async function getParkingsForDate(parkinglotid: number, date?: string) {
-  
-
-  const targetDate = new Date((date ?? new Date().toISOString().split("T")[0]) as string);
  
-  targetDate.setHours(0, 0, 0, 0);
 
-  const nextDay = new Date(targetDate);
-  nextDay.setDate(nextDay.getDate() + 1);
+  // const targetDate = new Date((date ?? new Date().toISOString().split("T")[0]) as string);
+ 
+  // targetDate.setHours(0, 0, 0, 0);
+
+  // const nextDay = new Date(targetDate);
+  // nextDay.setDate(nextDay.getDate() + 1);
 
   const parkings = await prisma.parkings.findMany({
     where: {
-      parkingslotid: parkinglotid,
-      date: {
-        gte: targetDate,
-        lt: nextDay,
-      },
-    },
-    include: {
-      user: true
-
-    },
-    orderBy: {
-      starttime: 'asc',
-    },
+      parkingslotid: 15,
+    }
   });
+ 
 
   return parkings;
 }
@@ -86,9 +76,6 @@ async function getParkingsForDate(parkinglotid: number, date?: string) {
       const parkinglotid =  Number(parkinglot.id)
 
       const parkings = await getParkingsForDate(parkinglotid)
-      
-    
-
       
 
       return (
@@ -126,9 +113,13 @@ async function getParkingsForDate(parkinglotid: number, date?: string) {
                 </div>
               </div>
             </div>
+
+            <div className="text-2xl font-bold mt-10">
+            Recent Parkings 
+            </div>
                     {parkings.map((parking) => (
-                    <div key={parking.id} className="p-4 border rounded shadow mb-2">
-                      <div className="font-semibold">{parking.user.name}</div>
+                    <div key={parking.id} className="p-4 border rounded shadow mb-2 mt-6">
+                
                       <div>Car Number: {parking.carnumber}</div>
                       <div>Start: {new Date(parking.starttime).toLocaleTimeString()}</div>
                       <div>End: {new Date(parking.endtime).toLocaleTimeString()}</div>

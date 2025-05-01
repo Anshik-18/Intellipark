@@ -52,7 +52,7 @@ export default async function Home(){
 
             <div className="m-20">
                     <UserParkingCard status ={booking.status}
-                    location = {booking.parkingslot.Name}
+                    
                     Adress = {booking.parkingslot.Adress}
                     carNumber = {booking.carnumber}
                     starttime = {booking.starttime}>  

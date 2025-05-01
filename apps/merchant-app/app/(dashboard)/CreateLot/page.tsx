@@ -11,7 +11,7 @@
     const [price, setprice] = useState("");
     const [adress, setadress] = useState("");
     const [totalslots, settotalslots] = useState("");
-    const[parkinglotresult, setparkinglotresult] = useState("")
+    const[parkinglotresult, setparkinglotresult] = useState<string | null>(null)
     const [latitude, setLatitude] = useState<number | null>(null);
     const [longitude, setLongitude] = useState<number | null>(null);
 
@@ -40,7 +40,7 @@
       
   }
 
-    return (
+    return   (
       <div className="px-4 py-6 max-w-md mx-auto sm:max-w-xl md:max-w-2xl">
         <h1 className="text-xl font-bold text-center mb-6 sm:text-2xl">
           Enter the details of the parking lot
@@ -80,7 +80,14 @@
         </div>
         <div className="pt-5 flex justify-center">
           <Button   onClick={createparkinglot} children="Create Parking"></Button>
+   
         </div>
+        {parkinglotresult && (<div>
+         Parking Lot Created Succesfully 
+       </div>)}
+         
       </div>
-    );
+    )
+    
+    
   }
