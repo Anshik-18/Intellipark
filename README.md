@@ -1,81 +1,59 @@
-# Turborepo starter
+# 🚗 Smart Parking System 🅿️
 
-This is an official starter Turborepo.
+A full-stack Smart Parking System designed to help users find the nearest parking spots during peak hours and empower merchants to manage parking efficiently. Built with scalability, real-world usability, and clean architecture in mind.
 
-## Using this example
+## 📱 Project Overview
 
-Run the following command:
+This system consists of **two separate apps**:
 
-```sh
-npx create-turbo@latest
-```
+### 👤 User App
+- Search for nearby parking lots using **Google Maps**
+- View real-time availability of parking spaces
+- Get smart parking suggestions based on **minimum distance**
+- Book parking spots and view booking history
+- Responsive UI for a smooth user experience
 
-## What's inside?
+### 🏪 Merchant App
+- Manage bookings and monitor parking activity
+- View all parking records for any selected date
+- Handle real-time parking availability
+- Secure login for merchant access only
 
-This Turborepo includes the following packages/apps:
+## 🚀 Features
 
-### Apps and Packages
+- 📍 Google Maps Integration
+- 📊 Real-time availability & booking system
+- 🧠 AI logic to recommend the closest parking options
+- 📅 Filterable merchant dashboard for daily activity
+- 🎯 Customized map markers for clear visuals
+- 🔐 Role-based authentication (User & Merchant)
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## 🛠️ Tech Stack
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+| Layer         | Tech Used                                   |
+|--------------|----------------------------------------------|
+| Frontend     | Next.js, Tailwind CSS                        |
+| Backend      | Node.js (via Next.js API routes), Prisma     |
+| Database     | PostgreSQL + Extensions                      |
+| Dev Workflow | Turborepo Monorepo Architecture              |
+| APIs         | Google Maps API (Search, Distance, Markers)  |
 
-### Utilities
+## 📚 What I Learned
 
-This Turborepo has some additional tools already setup for you:
+- Adding and working with **PostgreSQL extensions**
+- Integrating and **customizing Google Maps API**
+- Designing **custom map markers** for better UX
+- Managing monorepos using **Turborepo**
+- Creating scalable full-stack applications with clean UI/UX
+- Separating frontend logic based on user roles
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 📦 Folder Structure (Turborepo)
 
-### Build
 
-To build all apps and packages, run the following command:
 
-```
-cd my-turborepo
-pnpm build
-```
+https://github.com/user-attachments/assets/5cd4305b-1319-4a22-8141-1ec7e304d9e6
 
-### Develop
 
-To develop all apps and packages, run the following command:
 
-```
-cd my-turborepo
-pnpm dev
-```
+https://github.com/user-attachments/assets/bb70d94d-2e13-4e2f-88f7-dd3dcdb69a7a
 
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
