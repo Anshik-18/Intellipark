@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
      
-    "build": "turbo build && prisma generate && next build",
+    "build": "prisma generate && turbo build  && next build",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""

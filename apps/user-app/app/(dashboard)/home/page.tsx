@@ -55,7 +55,7 @@ export default async function Home(){
                     
                     Adress = {booking.parkingslot.Adress}
                     carNumber = {booking.carnumber}
-                    starttime = {booking.starttime}>  
+                    location = " ">  
                     </UserParkingCard>
             </div>
 
